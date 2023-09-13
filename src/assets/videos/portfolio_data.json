@@ -1,0 +1,8 @@
+[
+    {"id":1, "title":"Land F/X Mobile App", "Video":"app.mp4", "Img":"", "text":"Mobile App built with Xamarin Forms in C#, XAML, PHP, MySQL. Allows account creation. Displays learning video library, upcoming events, and news to clients."},
+	{"id":2, "title":"Black Friday Sale", "Video":"black-friday.mp4", "Img":"", "text":"Webpage built with PHP, HTML, CSS, JS. Wild, wacky, and eye-catching design to show off sale discounts and rules."},
+	{"id":3, "title":"Products", "Video":"products.mp4", "Img":"", "text":"Webpage built with HTML, CSS, JS. Displays available Land F/X products. Clean simple design."},
+	{"id":4, "title":"Flight Event", "Video":"space.mp4", "Img":"", "text":"Webpage built with HTML, CSS, JS, PHP. Invitation page to join a tradeshow event at the San Diego Air and Space Museum."},
+	{"id":5, "title":"Video Library", "Video":"videos.mp4", "Img":"", "text":"Webapp built with HTML, CSS, JS, PHP, MySQL. Organized 500+ videos into 13+ categories and an adjusting number of subcategories. Returned JSON that allowed weighted Javascript search based on titles then descriptions. Single state page that adjusted content without reload."},
+	{"id":6, "title":"30-Day Challenge", "Video":"welcome.mp4", "Img":"", "text":"In-software webapp built with HTML, CSS, JS. Software learning program used by new clients, trial users, and even as part of university curriculums. 45+ lessons that interfaced directly with the software to confirm completion or failure. Comformed to IE6 requirements due to software limitations."}
+]
