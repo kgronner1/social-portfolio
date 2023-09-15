@@ -219,6 +219,7 @@ function Chattery({ onTypeChange }) {
         if (x != "") {
           setContactMessage(x);
           // send email
+          handleSubmit(contactFName, contactLName, contactEmail, x);
           // clear states
           setContactFName("");
           setContactLName("");
@@ -305,6 +306,34 @@ function Chattery({ onTypeChange }) {
     }
   };
 
+  const [state, setState] = React.useState({
+    messageSent: false
+  })
+
+  const [status, setStatus] = useState("Submit");
+  const handleSubmit = async (contactF, contactL, contactE, contactM) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    setState({ messageSent: true });
+    const name = contactF + " " + contactL;
+    const email = contactE;
+    const message = contactM;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:1234/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Submit");
+    let result = await response.json();
+  };
+
   return (
     <div className="flex flex-1 flex-col">
       <div className=" flex flex-1 flex-col justify-between p-2">
@@ -344,7 +373,7 @@ function Chattery({ onTypeChange }) {
             placeholder="Chat to navigate"
             className="w-full rounded-md bg-gray-100 py-3 pl-12 text-gray-600 placeholder-gray-600 focus:placeholder-gray-400 focus:outline-none"
           />
-          <div className="absolute inset-y-0 right-0 hidden items-center sm:flex">
+          <div className="absolute inset-y-0 right-0 items-center sm:flex">
             <button
               onClick={addUserMessage}
               type="button"
