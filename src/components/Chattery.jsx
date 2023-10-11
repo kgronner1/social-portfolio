@@ -312,7 +312,7 @@ function Chattery({ onTypeChange }) {
 
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (contactF, contactL, contactE, contactM) => {
-    e.preventDefault();
+    //e.preventDefault();
     setStatus("Sending...");
     setState({ messageSent: true });
     const name = contactF + " " + contactL;
