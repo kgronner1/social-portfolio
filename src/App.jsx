@@ -4,9 +4,7 @@ import Chat from "./components/Chat";
 import PortfolioScroll from "./components/PortfolioScroll";
 
 // TO DO:
-// create contact
 // mobile
-// prep to release
 
 function App() {
   const [type, setType] = useState("web");

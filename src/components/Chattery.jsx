@@ -307,8 +307,8 @@ function Chattery({ onTypeChange }) {
   };
 
   const [state, setState] = React.useState({
-    messageSent: false
-  })
+    messageSent: false,
+  });
 
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (contactF, contactL, contactE, contactM) => {
@@ -323,12 +323,13 @@ function Chattery({ onTypeChange }) {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://localhost:1234/contact", {
+    //http://localhost:1234/contact
+    let response = await fetch("/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
-      body: JSON.stringify(details),
+      body: new URLSearchParams(details).toString(),
     });
     setStatus("Submit");
     let result = await response.json();
@@ -336,6 +337,7 @@ function Chattery({ onTypeChange }) {
 
   return (
     <div className="flex flex-1 flex-col">
+      <input type="hidden" name="form-name" value="PortfolioContact"></input>
       <div className=" flex flex-1 flex-col justify-between p-2">
         <div
           id="messages"
