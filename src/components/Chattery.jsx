@@ -373,7 +373,7 @@ function Chattery({ onTypeChange }) {
             ref={inputRef} // Set the ref for the input element
             onKeyPress={handleKeyPress} // Attach the key press listener
             placeholder="Chat to navigate"
-            className="w-full rounded-md bg-gray-100 py-3 text-gray-600 placeholder-gray-600 focus:placeholder-gray-400 focus:outline-none"
+            className="w-full rounded-md bg-gray-100 py-3 pl-12 text-gray-600 placeholder-gray-600 focus:placeholder-gray-400 focus:outline-none"
           />
           <div className="absolute inset-y-0 right-0 items-center sm:flex">
             <button
