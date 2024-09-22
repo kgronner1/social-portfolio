@@ -16,7 +16,7 @@ function App() {
   return (
     <div
       id="page"
-      className="flex h-full min-h-screen w-full flex-col justify-between md:flex-row"
+      className="flex h-full min-h-screen w-full flex-col-reverse md:flex-col justify-between md:flex-row"
     >
       <div className="flex flex-1 md:w-1/2 md:flex-initial">
         <PortfolioScroll type={type}></PortfolioScroll>
