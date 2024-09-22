@@ -107,6 +107,10 @@ function Chattery({ onTypeChange }) {
         ...prevMessages,
         { id: prevMessages.length, name: "User", message: x },
       ]);
+
+      let container = document.getElementById('messages');
+      container.scrollTop = container.scrollHeight;
+
       //console.log("setUserMSG", z, messages);
       inputRef.current.value = "";
 
@@ -283,6 +287,10 @@ function Chattery({ onTypeChange }) {
       ...prevMessages,
       { id: prevMessages.length, name: "Me", message: x },
     ]);
+
+    let container = document.getElementById('messages');
+    container.scrollTop = container.scrollHeight;
+
     //console.log("setMeMSG", messages);
   }
 
@@ -398,7 +406,7 @@ function Chattery({ onTypeChange }) {
         {`
             @media (max-width: 767px) {
                 .maxH70Minus {
-                  max-height: calc(70vh - 230px);
+                  max-height: calc(75vh - 230px);
                 }
             }
             .clickable {

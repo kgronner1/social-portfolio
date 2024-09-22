@@ -14,7 +14,7 @@ function Chat({ type, onTypeChange }) {
         {`
           @media (max-width: 767px) {
               .sm-h-screen70 {
-                height:70vh;
+                height:75vh;
               }
           }
           `}
