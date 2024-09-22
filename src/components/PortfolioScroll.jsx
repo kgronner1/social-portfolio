@@ -40,7 +40,7 @@ function PortfolioScroll({ type }) {
       video: video6,
       img: img6,
       shortText: "Cross-platform mobile game, top-down space racing.",
-      text: "Escape the black hole before your opponent in this top-down space racing game. Designed with Godot Game Engine.",
+      text: "Multiplayer cross-platform mobile game built with AWS and GDscript. Escape the black hole before your opponent in this top-down space racing game. Designed with Godot Game Engine.",
     },
     {
       id: 5,

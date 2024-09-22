@@ -336,7 +336,7 @@ function Chattery({ onTypeChange }) {
   };
 
   return (
-    <div className="flex flex-1 flex-col">
+    <div className="flex flex-1 flex-col overflow-y-scroll">
       <input type="hidden" name="form-name" value="PortfolioContact"></input>
       <div className=" flex flex-1 flex-col justify-between p-2">
         <div
