@@ -336,9 +336,9 @@ function Chattery({ onTypeChange }) {
   };
 
   return (
-    <div className="flex flex-1 flex-col overflow-y-scroll">
+    <div className="flex flex-1 flex-col">
       <input type="hidden" name="form-name" value="PortfolioContact"></input>
-      <div className=" flex flex-1 flex-col justify-between p-2">
+      <div className=" flex flex-1 flex-col justify-between maxH70Minus p-2">
         <div
           id="messages"
           className="scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch flex flex-col space-y-4 overflow-y-auto p-3"
@@ -396,6 +396,11 @@ function Chattery({ onTypeChange }) {
       </div>
       <style>
         {`
+            @media (max-width: 767px) {
+                .maxH70Minus {
+                  max-height: calc(70vh - 230px);
+                }
+            }
             .clickable {
               color: rgb(59, 130, 246);
               cursor: pointer;
