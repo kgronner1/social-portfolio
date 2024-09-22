@@ -2,32 +2,54 @@ import React, { useEffect, useRef } from "react";
 import Player from "./Player";
 
 import video1 from "../assets/videos/welcome.mp4";
-import img1 from "../assets/videos/welcome.png";
+import img1 from "../assets/videos/welcome.webp";
 
 import video2 from "../assets/videos/videos.mp4";
-import img2 from "../assets/videos/videos.png";
+import img2 from "../assets/videos/videos.webp";
 
 import video3 from "../assets/videos/app.mp4";
-import img3 from "../assets/videos/app.png";
+import img3 from "../assets/videos/app.webp";
 
 import video4 from "../assets/videos/purchase.mp4";
-import img4 from "../assets/videos/purchase.png";
+import img4 from "../assets/videos/purchase.webp";
 
 import video5 from "../assets/videos/space.mp4";
-import img5 from "../assets/videos/space.png";
+import img5 from "../assets/videos/space.webp";
 
-import imgWood0 from "../assets/wood/0.jpeg";
-import imgWood1 from "../assets/wood/1.jpeg";
-import imgWood2 from "../assets/wood/2.jpeg";
-import imgWood3 from "../assets/wood/3.jpeg";
-import imgWood4 from "../assets/wood/4.jpeg";
-import imgWood5 from "../assets/wood/5.jpeg";
+import video6 from "../assets/videos/planet-jump.mp4";
+import img6 from "../assets/videos/planet-jump.webp";
+
+import video7 from "../assets/videos/tradeshow-ipad.mp4";
+import img7 from "../assets/videos/tradeshow-ipad.webp";
+
+import imgWood0 from "../assets/wood/0.jpg";
+import imgWood1 from "../assets/wood/1.jpg";
+import imgWood2 from "../assets/wood/2.jpg";
+import imgWood3 from "../assets/wood/3.jpg";
+import imgWood4 from "../assets/wood/4.jpg";
+import imgWood5 from "../assets/wood/5.jpg";
 
 import resumeImg from "../assets/resume/kyler-resume.png";
 import resumePdf from "../assets/resume/kyler-resume.pdf";
 
 function PortfolioScroll({ type }) {
   const webData = [
+    {
+      id: 6,
+      title: "Planet Jumper Mobile Game",
+      video: video6,
+      img: img6,
+      shortText: "Cross-platform mobile game, top-down space racing.",
+      text: "Escape the black hole before your opponent in this top-down space racing game. Designed with Godot Game Engine.",
+    },
+    {
+      id: 5,
+      title: "Land F/X Tradeshow iPads",
+      video: video7,
+      img: img7,
+      shortText: "Interactive sales tool for tradeshow booths built with CSS and jQuery. Intuitive easy-touch navigation and locally hosted content.",
+      text: "Interactive sales tool for tradeshow booths built with CSS and jQuery. Eyecatching auto-playing videos and webpage exploration. Converted web-based content into locally hosted content. Designed for iPads, also converted for use on handout USBs.",
+    },
     {
       id: 4,
       title: "Land F/X Purchase",
