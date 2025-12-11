@@ -4,6 +4,7 @@ import Message from "./Message";
 function Chattery({ onTypeChange }) {
   // Create a ref for the input element
   const inputRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   const [inputType, setInputType] = useState("");
 
@@ -78,6 +79,13 @@ function Chattery({ onTypeChange }) {
 
   // list of all messages
   const [messages, setMessages] = useState([starterMessage]);
+
+  useEffect(() => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   // current message in input
   let currentMessage = "";
@@ -287,10 +295,6 @@ function Chattery({ onTypeChange }) {
       ...prevMessages,
       { id: prevMessages.length, name: "Me", message: x },
     ]);
-
-    let container = document.getElementById('messages');
-    container.scrollTop = container.scrollHeight;
-
     //console.log("setMeMSG", messages);
   }
 
@@ -344,12 +348,13 @@ function Chattery({ onTypeChange }) {
   };
 
   return (
-    <div className="flex flex-1 flex-col">
+    <div className="flex flex-1 min-h-0 flex-col">
       <input type="hidden" name="form-name" value="PortfolioContact"></input>
-      <div className=" flex flex-1 flex-col justify-between maxH70Minus p-2">
+      <div className="flex flex-1 min-h-0 flex-col gap-2 maxH70Minus p-2">
         <div
           id="messages"
-          className="scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch flex flex-col space-y-4 overflow-y-auto p-3"
+          ref={messagesContainerRef}
+          className="scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch flex flex-1 min-h-0 flex-col space-y-4 overflow-y-auto p-3"
         >
           {messages.map((message) => (
             <Message

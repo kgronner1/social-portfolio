@@ -6,7 +6,7 @@ function Chat({ type, onTypeChange }) {
   return (
     <div
       id="chat"
-      className="sticky top-0 flex h-screen sm-h-screen70 w-full flex-col overflow-y-auto p-2"
+      className="flex w-full min-h-0 flex-col overflow-hidden p-2 sm-h-screen70 md:sticky md:top-0 md:h-screen md:max-h-screen"
     >
       <ProfileBar />
       <Chattery onTypeChange={onTypeChange} type={type} />
