@@ -3,7 +3,7 @@ import KylerImage from "../assets/chat/Kyler.png";
 
 function ProfileBar() {
   return (
-    <div className="flex justify-between bg-gray-100 p-4 shadow-md sm:items-center">
+    <div className="flex justify-between bg-white p-4 shadow-md sm:items-center rounded-lg">
       <div className="relative flex items-center space-x-4">
         <div className="relative">
           <span className="absolute bottom-0 right-0 text-green-500">

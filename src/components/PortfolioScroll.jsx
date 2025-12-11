@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Player from "./Player";
+import ProfileBar from "./ProfileBar";
 
 import video1 from "../assets/videos/welcome.mp4";
 import img1 from "../assets/videos/welcome.png";
@@ -146,7 +147,7 @@ function PortfolioScroll({ type }) {
         {data.map(({ id, title, text, video, img }) => (
           <article
             key={id}
-            className="portfolioItemText bg-gray-100 p-4 shadow-md"
+            className="portfolioItemText bg-white p-4 shadow-md rounded-lg"
           >
             <div className="portfolio_title">
               <h2 className="text-2xl font-semibold">{title}</h2>
@@ -176,6 +177,9 @@ function PortfolioScroll({ type }) {
 
   return (
     <div>
+      <div className="block md:hidden p-2">
+        <ProfileBar />
+      </div>
       {portBool ? (
         <PortfolioLayout></PortfolioLayout>
       ) : (

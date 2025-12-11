@@ -359,13 +359,13 @@ function Chattery({ onTypeChange }) {
       </div>
       <div className="py-2">
         <p
-          className="text-right text-gray-200 hover:cursor-pointer"
+          className="text-right text-gray-300 hover:cursor-pointer"
           onClick={clearChat}
         >
           Clear chat
         </p>
       </div>
-      <div className="justify-between bg-gray-100 p-4 shadow-md sm:items-center">
+      <div className="justify-between bg-white p-4 shadow-md sm:items-center rounded-lg">
         <div className="relative flex">
           <input
             onChange={onChangeMessageInput}
@@ -373,7 +373,7 @@ function Chattery({ onTypeChange }) {
             ref={inputRef} // Set the ref for the input element
             onKeyPress={handleKeyPress} // Attach the key press listener
             placeholder="Chat to navigate"
-            className="w-full rounded-md bg-gray-100 py-3 pl-12 text-gray-600 placeholder-gray-600 focus:placeholder-gray-400 focus:outline-none"
+            className="w-full rounded-md bg-white py-3 pl-12 text-gray-600 placeholder-gray-600 focus:placeholder-gray-400 focus:outline-none"
           />
           <div className="absolute inset-y-0 right-0 items-center sm:flex">
             <button

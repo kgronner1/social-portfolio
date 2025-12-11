@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-sand {
+    background:rgba(235, 235, 230, 1);
+}

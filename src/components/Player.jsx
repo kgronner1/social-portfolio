@@ -4,6 +4,10 @@ import HoverVideoPlayer from "react-hover-video-player";
 function VideoComponent({ id, vidSrc, imgSrc }) {
   const hoverVideoRef = useRef();
 
+  const containerStyle = {
+    aspectRatio: "16 / 9",
+  };
+
   const goFull = () => {
     console.log("goFull");
     // make video element go full screen using reference
@@ -24,32 +28,38 @@ function VideoComponent({ id, vidSrc, imgSrc }) {
   };
 
   return (
-    <div>
+    <div
+      className="relative w-full overflow-hidden rounded-md shadow-md"
+      style={containerStyle}
+    >
       <HoverVideoPlayer
-        className="hover:cursor-pointer"
+        className="hover:cursor-pointer h-full w-full"
         onClick={goFull}
         videoSrc={vidSrc}
         videoRef={hoverVideoRef}
         muted={true}
+        videoStyle={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
         pausedOverlay={
-          <div className="relative">
-            <img
-              src={imgSrc}
-              alt=""
-              style={{
-                // Make the image expand to cover the video's dimensions
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
+          <img
+            src={imgSrc}
+            alt=""
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
         }
         loadingOverlay={
-          <div className="loading-overlay">
+          <div className="loading-overlay absolute inset-0 flex items-center justify-center bg-gray-100">
             <div className="loading-spinner" />
           </div>
         }
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
       />
     </div>
   );
@@ -57,6 +67,9 @@ function VideoComponent({ id, vidSrc, imgSrc }) {
 
 function ImgComponent({ id, vidSrc, imgSrc }) {
   const hoverImgRef = useRef();
+  const containerStyle = {
+    aspectRatio: "16 / 9",
+  };
   const goFull = () => {
     console.log("goFull");
     // make video element go full screen using reference
@@ -77,18 +90,25 @@ function ImgComponent({ id, vidSrc, imgSrc }) {
   };
 
   return (
-    <img
-      src={imgSrc}
-      alt=""
-      onClick={goFull}
-      ref={hoverImgRef}
-      style={{
-        // Make the image expand to cover the video's dimensions
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-      }}
-    />
+    <div
+      className="relative w-full overflow-hidden rounded-md shadow-md"
+      style={containerStyle}
+    >
+      <img
+        src={imgSrc}
+        alt=""
+        onClick={goFull}
+        ref={hoverImgRef}
+        className="h-full w-full object-cover"
+        loading="lazy"
+        style={{
+          // Make the image expand to cover the video's dimensions
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
+      />
+    </div>
   );
 }
 

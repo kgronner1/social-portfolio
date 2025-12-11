@@ -17,7 +17,7 @@ function Message({ id, who, message }) {
   if (who === "Me") {
     a = "flex items-end";
     b = "order-2 mx-2 flex max-w-xs flex-col items-start space-y-2";
-    c = "inline-block rounded-lg rounded-bl-none bg-gray-300 px-4 py-2";
+    c = "inline-block rounded-lg rounded-bl-none bg-white px-4 py-2";
     d = KylerImage;
     e = "order-1 h-10 w-10 rounded-full";
   }
