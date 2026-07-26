@@ -5,8 +5,8 @@ import ProfileBar from "./ProfileBar";
 import video1 from "../assets/videos/welcome.mp4";
 import img1 from "../assets/videos/welcome.webp";
 
-import video2 from "../assets/videos/videos.mp4";
-import img2 from "../assets/videos/videos.webp";
+import video2 from "../assets/videos/friction-loss.mp4";
+import img2 from "../assets/videos/friction-loss.webp";
 
 import video3 from "../assets/videos/app.mp4";
 import img3 from "../assets/videos/app.webp";
@@ -41,15 +41,7 @@ function PortfolioScroll({ type }) {
       video: video6,
       img: img6,
       shortText: "Cross-platform mobile game, top-down space racing.",
-      text: "Multiplayer cross-platform mobile game built with AWS and GDscript. Escape the black hole before your opponent in this top-down space racing game. Designed with Godot Game Engine.",
-    },
-    {
-      id: 5,
-      title: "Land F/X Tradeshow iPads",
-      video: video7,
-      img: img7,
-      shortText: "Interactive sales tool for tradeshow booths built with CSS and jQuery. Intuitive easy-touch navigation and locally hosted content.",
-      text: "Interactive sales tool for tradeshow booths built with CSS and jQuery. Eyecatching auto-playing videos and webpage exploration. Converted web-based content into locally hosted content. Designed for iPads, also converted for use on handout USBs.",
+      text: "Multiplayer cross-platform mobile game built with AWS, Node JS, and GDscript. Escape the black hole before your opponent in this top-down space racing game. Designed with Godot Game Engine.",
     },
     {
       id: 4,
@@ -58,6 +50,14 @@ function PortfolioScroll({ type }) {
       img: img4,
       shortText: "Purchasing page built with CSS, JS, PHP, MySQL.",
       text: "Web application built with HTML, CSS, JS, PHP, MySQL. A purchase page that connects to PayPal's Payflow purchasing API. Simple and clean design. Manages, sanitizes, and updates data in company administration system. Custom control for admins.",
+    },
+    {
+      id: 5,
+      title: "Land F/X Tradeshow Touchscreens",
+      video: video7,
+      img: img7,
+      shortText: "Interactive sales tool for tradeshow booths built with CSS and jQuery. Intuitive easy-touch navigation and locally hosted content.",
+      text: "Interactive sales tool for tradeshow booths built with CSS and jQuery. Eyecatching auto-playing videos and webpage exploration. Converted web-based content into locally hosted content. Designed for 48\" touchscreen TVs, 10.8\" iPads, and also converted for use on handout USBs.",
     },
     {
       id: 3,
@@ -76,13 +76,21 @@ function PortfolioScroll({ type }) {
         "Software learning program built with IE6 compliant CSS and JS.",
       text: "In-software web app built with HTML, CSS, JS. Software learning program used by new clients, trial users, and even as part of university curriculums. 45+ lessons that interfaced directly with the software to confirm completion or failure.",
     },
+    // {
+    //   id: 2,
+    //   title: "Video Library",
+    //   video: video2,
+    //   img: img2,
+    //   shortText: "Video library built with CSS, JS, PHP, MySQL.",
+    //   text: "Web app built with HTML, CSS, JS, PHP, MySQL. Organized 500+ videos into 13+ categories and an adjusting number of subcategories. Weighted Javascript search based on titles then descriptions. Single state page that adjusted content without reload.",
+    // },
     {
       id: 2,
-      title: "Video Library",
+      title: "Friction Loss",
       video: video2,
       img: img2,
-      shortText: "Video library built with CSS, JS, PHP, MySQL.",
-      text: "Web app built with HTML, CSS, JS, PHP, MySQL. Organized 500+ videos into 13+ categories and an adjusting number of subcategories. Weighted Javascript search based on titles then descriptions. Single state page that adjusted content without reload.",
+      shortText: "One of the free tool pages run as a Google Ad.",
+      text: "Free tool page repurposing a portion of the software into a lead magnet. Used in my larger Google Ad campaign that cut cost per trial 41%, increased trial leads 88%, and grew final trial-to-sale conversions 47%.",
     },
     {
       id: 5,
